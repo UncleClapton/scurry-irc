@@ -1,0 +1,40 @@
+div.titlebar {
+  -webkit-user-select: none;
+  font-family: "Segoe UI", system-ui, sans-serif;
+  background: $black-dark;
+  color: $white;
+  display: flex;
+  align-items: stretch;
+  font-size: 13px;
+
+  svg {
+    pointer-events: none;
+  }
+
+  .titlebar-title {
+    -webkit-app-region: drag;
+    flex-grow: 1;
+    display: flex;
+    line-height: 31px;
+    justify-content: center;
+  }
+
+  .titlebar-control {
+    background: none;
+    color: $white;
+    border: none;
+    outline: none;
+    padding: 8px 18px;
+
+
+
+    &:hover {
+      background: rgba(255,255,255, .1);
+
+      &.close {
+        background: $red;
+      }
+    }
+  }
+
+}

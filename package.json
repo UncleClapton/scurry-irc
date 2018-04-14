@@ -1,0 +1,88 @@
+{
+  "author": {
+    "email": "clapton@fuelrats.com",
+    "name": "Cameron Welter",
+    "url": "https://www.uncleclapton.me/"
+  },
+  "build": {
+    "appId": "me.uncleclapton.scurry",
+    "productName": "Scurry IRC",
+    "directories": {
+      "output": "build"
+    },
+    "files": [
+      "package.json",
+      "build",
+      "node_modules"
+    ],
+    "mac": {
+      "category": "public.app-category.social-networking"
+    },
+    "squirrelWindows": {
+      "artifactName": "${name}-${version}-${os}-${arch}-${channel}.exe"
+    },
+    "win": {
+      "target": "squirrel"
+    }
+  },
+  "dependencies": {
+    "@babel/core": "^7.0.0-beta.44",
+    "@babel/plugin-proposal-class-properties": "^7.0.0-beta.44",
+    "@babel/plugin-proposal-object-rest-spread": "^7.0.0-beta.44",
+    "@babel/preset-react": "^7.0.0-beta.44",
+    "babel-eslint": "^8.2.2",
+    "babel-loader": "^8.0.0-beta.2",
+    "babel-plugin-inline-react-svg": "^0.5.2",
+    "babel-register": "^6.26.0",
+    "css-loader": "^0.28.11",
+    "directory-named-webpack-plugin": "^4.0.0",
+    "electron-reload": "^1.2.2",
+    "electron-titlebar-windows": "^3.0.0",
+    "eslint-import-resolver-webpack": "^0.9.0",
+    "extract-text-webpack-plugin": "^4.0.0-beta.0",
+    "irc-framework": "^2.11.0",
+    "node-sass": "^4.8.3",
+    "prop-types": "^15.6.1",
+    "react": "^16.3.1",
+    "react-dom": "^16.3.1",
+    "react-hot-loader": "^4.0.1",
+    "react-redux": "^5.0.7",
+    "react-spring": "^4.0.4",
+    "redux": "^3.7.2",
+    "redux-devtools-extension": "^2.13.2",
+    "redux-thunk": "^2.2.0",
+    "sass-loader": "^6.0.7",
+    "style-loader": "^0.20.3",
+    "webpack": "^4.5.0",
+    "webpack-dev-server": "^3.1.3",
+    "webpack-merge": "^4.1.2"
+  },
+  "description": "Modern IRC Client designed for rats and rat aficionados.",
+  "devDependencies": {
+    "cross-env": "^5.1.4",
+    "electron": "^1.8.4",
+    "electron-builder": "^20.8.1",
+    "electron-builder-lib": "^20.8.2",
+    "electron-builder-squirrel-windows": "^20.8.0",
+    "electron-devtools-installer": "^2.2.3",
+    "eslint": "^4.19.1",
+    "eslint-config-airbnb": "^16.1.0",
+    "eslint-plugin-import": "^2.10.0",
+    "eslint-plugin-jsx-a11y": "^6.0.3",
+    "eslint-plugin-react": "^7.7.0",
+    "webpack-cli": "^2.0.14",
+    "yarn-run-all": "^3.1.1"
+  },
+  "main": "./app/init.js",
+  "name": "scurry-irc",
+  "private": true,
+  "scripts": {
+    "dev": "run-p dev:*",
+    "dev:electron": "electron app/init.js",
+    "dev:webpack": "cross-env NODE_ENV=development webpack-dev-server --mode=development",
+    "build": "run-s build:webpack build:electron",
+    "build:electron": "electron-builder --win",
+    "build:webpack": "webpack --mode=production"
+  },
+  "version": "0.1.0"
+}
