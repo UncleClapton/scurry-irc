@@ -1,11 +1,9 @@
 div.titlebar {
   -webkit-user-select: none;
-  font-family: "Segoe UI", system-ui, sans-serif;
   background: $black-dark;
   color: $white;
   display: flex;
   align-items: stretch;
-  font-size: 13px;
 
   svg {
     pointer-events: none;

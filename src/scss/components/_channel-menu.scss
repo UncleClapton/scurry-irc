@@ -1,0 +1,40 @@
+div.channel-menu {
+  padding: 1rem;
+  background: $black-dark;
+  height: 100%;
+  width: 150px;
+
+  label {
+    font-size: 1.25em;
+  }
+
+  ul.channel-list {
+    border-top: 1px solid $white-dark;
+    list-style: none;
+    padding: 0.5rem 0 0 0;
+    margin: 0.5rem 0 0 0;
+
+    .channel {
+      margin-right: -1rem;
+
+      button {
+        background: none;
+        border: none;
+        color: $white-dark;
+        padding: .5rem 1rem;
+        border-radius: 4px 0 0 4px;
+        width: 100%;
+        text-align: left;
+        outline: none;
+
+        &:hover {
+          background: $black;
+        }
+      }
+
+      &.active button {
+        background: $black;
+      }
+    }
+  }
+}
