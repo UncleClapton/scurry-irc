@@ -1,5 +1,12 @@
 # Scurry
 
+### This project has been abandoned in favor of a different approach. This repo has been archived for reference. 
+
+See the [New Repo](https://github.com/fuelrats/scurry-irc) for the new version
+
+
+# Original README.md 
+
 Modern IRC client built in Electron and React. Designed by a rat for rats to perform rat-like activities.
 
 ## Installation
